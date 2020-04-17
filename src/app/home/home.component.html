@@ -1,0 +1,10 @@
+<div class="home-page">
+  <content>
+    <div> this is the content</div>
+  </content>
+<footer>
+<ul>
+  <li *ngFor="let page of links$ | async">{{ page.route }}</li>
+</ul>
+</footer>
+</div>
