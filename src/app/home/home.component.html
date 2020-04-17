@@ -1,10 +1,10 @@
-<div class="home-page">
-  <content>
-    <div> this is the content</div>
-  </content>
-<footer>
-<ul>
+<div class="home-page" fxLayoutAlign="column" fxLayoutAlign="center center">
+<ul class="link-text">
   <li *ngFor="let page of links$ | async">{{ page.route }}</li>
 </ul>
-</footer>
+<div class="hero-banner" fxLayout="center" fxLayout="column">
+  <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Welcome to</h1>
+  <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">San Sebastian</h1>
+  <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Equestrian Center</h1>
+</div>
 </div>
