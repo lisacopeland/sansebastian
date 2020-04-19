@@ -1,1 +1,35 @@
-<p>contact works!</p>
+<mat-card class="contact-card" fxLayout="column" fxLayoutAlign="center center">
+  <div>Want more information about boarding or training? Use the contact form below to send me
+    a message, send me email at <span><a href="mailto:lisacope@msn.com">lisacope@msn.com</a></span>, or call me at <span><a href="tel:12066193815">(206) 619-3815</a></span>
+  </div>
+  <form class="form-card" fxLayout="column" fxLayoutAlign="center center" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <h1 class="contact-title">Contact Me</h1>
+    <mat-form-field class="input-75">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" formControlName="name" required>
+      <mat-error *ngIf="contactForm.get('name').hasError('required')">This is required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input-75">
+      <mat-label>email</mat-label>
+      <input matInput type="email" placeholder="Email" formControlName="email" required>
+      <mat-error *ngIf="contactForm.get('email').hasError('required')">This is required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input-75">
+      <mat-label>Phone</mat-label>
+      <input matInput type="tel" placeholder="Phone Number" formControlName="phone">
+    </mat-form-field>
+    <mat-form-field class="input-75">
+      <mat-label>Subject</mat-label>
+      <input matInput placeholder="Subject, i.e. Boarding" formControlName="subject">
+    </mat-form-field>
+    <mat-form-field class="input-75">
+      <mat-label>Message</mat-label>
+      <textarea matInput rows="6" placeholder="Message, i.e. Send me info about..." formControlName="message" required></textarea>
+      <mat-error *ngIf="contactForm.get('message').hasError('required')">This is required</mat-error>
+    </mat-form-field>
+    <div fxLayout="row" fxLayoutAlign="center center" class="button-row">
+    <button mat-raised-button color="primary" type="submit">Send</button>
+    </div>
+  </form>
+
+</mat-card>

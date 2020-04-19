@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact',
@@ -10,9 +11,10 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
 
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+    this.initForm();
   }
 
   initForm() {
@@ -26,6 +28,12 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
+    if (this.contactForm.invalid) {
+      this.snackBar.open('Please fill in required fields', '', {
+        duration: 2000,
+      });
+      return;
+    }
     console.log('Form' + this.contactForm.value);
   }
 
