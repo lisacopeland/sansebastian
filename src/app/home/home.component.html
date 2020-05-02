@@ -1,10 +1,19 @@
-<div class="home-page" fxLayoutAlign="column" fxLayoutAlign="center center">
-<ul class="link-text">
-  <li *ngFor="let page of links$ | async">{{ page.route }}</li>
-</ul>
-<div class="hero-banner" fxLayout="center" fxLayout="column">
-  <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Welcome to</h1>
-  <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">San Sebastian</h1>
-  <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Equestrian Center</h1>
-</div>
+<div fxLayout="column" fxLayoutAlign="space-between">
+  <ul class="link-text">
+    <li *ngFor="let page of links$ | async">{{ page.route }}</li>
+  </ul>
+  <div class="hero-banner" fxLayout="center" fxLayout="column">
+    <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Welcome to</h1>
+    <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">San Sebastian</h1>
+    <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Equestrian Center</h1>
+  </div>
+  <div class="red-border">
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let slide of slides">
+        <ng-template carouselSlide [id]="slide.id">
+          <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
 </div>
