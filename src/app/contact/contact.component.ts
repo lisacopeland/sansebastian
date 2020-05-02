@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 >>>>>>> 2affe21... Added contact form
+=======
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+>>>>>>> eeba46817070a529adc9aeb99420498e30cba0a8
 
 @Component({
   selector: 'app-contact',
@@ -13,19 +18,28 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ContactComponent implements OnInit {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   constructor() { }
 =======
   contactForm: FormGroup;
 
   constructor(private snackBar: MatSnackBar) { }
 >>>>>>> 2affe21... Added contact form
+=======
+  contactForm: FormGroup;
+
+  constructor(private snackBar: MatSnackBar) { }
+>>>>>>> eeba46817070a529adc9aeb99420498e30cba0a8
 
   ngOnInit(): void {
     this.initForm();
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> eeba46817070a529adc9aeb99420498e30cba0a8
   initForm() {
     this.contactForm = new FormGroup({
       name: new FormControl('', Validators.required),
