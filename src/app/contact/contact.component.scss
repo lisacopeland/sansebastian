@@ -1,13 +1,15 @@
-.contact-page {
-}
-
 .contact-card {
-  width: 50%;
   margin: 32px;
   padding: 32px;
 }
 
 .contact-title {
+  margin: 16px 0px 24px 0px;
+}
+
+.contact-text {
+  width: 75%;
+  text-overflow: wrap;
   margin: 16px 0px 16px 0px;
 }
 
