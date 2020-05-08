@@ -7,7 +7,7 @@
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">San Sebastian</h1>
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Equestrian Center</h1>
   </div>
-  <div class="red-border">
+  <div fxHide [fxShow.gt-md]=true class="red-border">
     <owl-carousel-o [options]="customOptions">
       <ng-container *ngFor="let slide of slides">
         <ng-template carouselSlide [id]="slide.id">

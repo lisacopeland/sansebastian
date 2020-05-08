@@ -7,11 +7,22 @@
       Equestrian Center
     </div>
   </div>
-  <div>
-  <button class="menu-button hvr-grow" mat-flat-button routerLink="/home">Home</button>
-  <button class="menu-button hvr-grow" mat-flat-button routerLink="/location">Location</button>
-  <button class="menu-button hvr-grow" mat-flat-button routerLink="/services">Services</button>
-  <button class="menu-button hvr-grow" mat-flat-button routerLink="/contact">Contact</button>
+  <div fxHide [fxShow.gt-md]=true>
+    <button class="menu-button hvr-grow" mat-flat-button routerLink="/home">Home</button>
+    <button class="menu-button hvr-grow" mat-flat-button routerLink="/location">Location</button>
+    <button class="menu-button hvr-grow" mat-flat-button routerLink="/services">Services</button>
+    <button class="menu-button hvr-grow" mat-flat-button routerLink="/contact">Contact</button>
+  </div>
+  <div fxHide [fxShow.lt-lg]=true>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item routerLink="/home">Home</button>
+      <button mat-menu-item routerLink="/location">Location</button>
+      <button mat-menu-item routerLink="/services">Services</button>
+      <button mat-menu-item routerLink="/contact">Contact</button>
+    </mat-menu>
   </div>
   <div>
   </div>

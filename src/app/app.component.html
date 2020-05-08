@@ -1,7 +1,10 @@
 <div fxLayout="column" fxLayoutAlign="space-between" class="page-wrapper">
 <app-header></app-header>
-<div class="page-layout" fxLayout="row" fxLayoutAlign="center">
+<!-- <div class="page-layout" fxLayout="row" fxLayoutAlign="center">
 <router-outlet></router-outlet>
+</div> -->
+<div class="page-layout" fxLayout="row" fxLayoutAlign="center start">
+  <router-outlet></router-outlet>
 </div>
-<app-footer></app-footer>
+<app-footer fxHide [fxShow.gt-md]=true></app-footer>
 </div>

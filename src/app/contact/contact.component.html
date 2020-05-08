@@ -6,12 +6,7 @@
   </div>
   <form class="form-card" fxLayout="column" fxLayoutAlign="center center" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <mat-form-field class="input-75">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Name" formControlName="name" required>
-      <mat-error *ngIf="contactForm.get('name').hasError('required')">This is required</mat-error>
-    </mat-form-field>
-    <mat-form-field class="input-75">
-      <mat-label>email</mat-label>
+      <mat-label>Email</mat-label>
       <input matInput type="email" placeholder="Email" formControlName="email" required>
       <mat-error *ngIf="contactForm.get('email').hasError('required')">This is required</mat-error>
     </mat-form-field>
