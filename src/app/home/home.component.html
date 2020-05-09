@@ -7,7 +7,7 @@
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">San Sebastian</h1>
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Equestrian Center</h1>
   </div>
-  <div class="red-border">
+  <div fxLayout="column" class="carousel-border">
   <ng-carousel
     [config]="config"
     (itemIndexChange)="setItemIndex($event)"
@@ -26,5 +26,11 @@
       </div>
     </ng-template>
   </ng-carousel>
+  <div fxLayout="row" fxLayoutAlign="center center">
+      <button *ngFor="let item of config.items; index as i;" [class.active]="i === itemIndex" (click)="goTo(i)"
+        class="bullet-button" mat-icon-button>
+        {{i + 1}}
+      </button>
+    </div>
   </div>
 </div>

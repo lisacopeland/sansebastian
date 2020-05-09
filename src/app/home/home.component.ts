@@ -22,8 +22,8 @@ export class HomeComponent implements OnInit {
   itemIndex = 0;
   config: CarouselConfig = {
     widthMode: CarouselWidthMode.PERCENT,
-    slideWidth: 100,
-    transitionDuration: 2500,
+    slideWidth: 50,
+    transitionDuration: 2000,
     alignMode: CarouselAlignMode.CENTER,
     shouldLoop: true,
     autoplayEnabled: true,

@@ -11,20 +11,23 @@
   margin: 32px 0px 32px 0px;
 }
 
-    .carousel-block {
-        flex: none;
-        width: 100%;
-    }
+.carousel-border {
+  width: 100%;
+  min-width: 100vw;
+}
 
-    .carousel-slide {
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        border: 5px solid rgb(105, 105, 105);
+.carousel-slide {
+    height: 300px;
+    border: 2px solid rgb(105, 105, 105);
 
-        &.active {
-            border-color: lightcoral;
-        }
+    &.active {
+        // border-color: white;
+        border: none;
     }
+}
+
+.bullet-button {
+    &.active {
+        background: lightgray;
+    }
+}
