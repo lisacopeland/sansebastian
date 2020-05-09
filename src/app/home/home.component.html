@@ -7,29 +7,29 @@
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">San Sebastian</h1>
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Equestrian Center</h1>
   </div>
-  <div fxLayout="column" class="carousel-border">
-  <ng-carousel
-    [config]="config"
-    (itemIndexChange)="setItemIndex($event)"
-    class="carousel-block">
-    <ng-template ngCarouselSlide let-item let-active="isActive">
-      <div [class.active]="active" [style.background-image]="item.src | safeHtml" class="carousel-slide">
-        <h2>
-          {{item.title}}
-        </h2>
-<!--         <button mat-raised-button ngCarouselPreventGhostClick color="primary">
-          Primary action
-        </button>
-        <button mat-button ngCarouselPreventGhostClick color="primary">
-          Secondary action
-        </button> -->
-      </div>
-    </ng-template>
-  </ng-carousel>
-  <div fxLayout="row" fxLayoutAlign="center center">
+  <div fxHide [fxShow.gt-md]=true fxLayout="column" class="carousel-border">
+    <ng-carousel
+      [config]="config"
+      (itemIndexChange)="setItemIndex($event)"
+      class="carousel-block">
+      <ng-template ngCarouselSlide let-item let-active="isActive">
+        <div fxLayoutAlign="center" [matTooltip]=item.title matTooltipPosition="above" [class.active]="active" [style.background-image]="item.src | safeHtml" class="carousel-slide">
+<!--           <h2>
+            {{item.title}}
+          </h2> -->
+  <!--         <button mat-raised-button ngCarouselPreventGhostClick color="primary">
+            Primary action
+          </button>
+          <button mat-button ngCarouselPreventGhostClick color="primary">
+            Secondary action
+          </button> -->
+        </div>
+      </ng-template>
+    </ng-carousel>
+    <div fxLayout="row" fxLayoutAlign="center center">
       <button *ngFor="let item of config.items; index as i;" [class.active]="i === itemIndex" (click)="goTo(i)"
         class="bullet-button" mat-icon-button>
-        {{i + 1}}
+         {{i + 1}}
       </button>
     </div>
   </div>
