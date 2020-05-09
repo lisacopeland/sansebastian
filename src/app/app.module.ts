@@ -9,6 +9,9 @@ import { MaterialModule } from './material/material.module';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     MaterialModule,
     FlexLayoutModule,
     ScullyLibModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
