@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarouselModule } from 'ng-carousel-cdk';
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent, SafeHtmlPipe } from './home.component';
+import { CarouselLisaComponent } from './carousel-lisa.component';
 import { MaterialModule } from '../material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+
 @NgModule({
-  declarations: [HomeComponent, SafeHtmlPipe],
+  declarations: [CarouselLisaComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule,
     MaterialModule,
     FlexLayoutModule,
-    CarouselModule
+  ],
+  exports: [
+    CarouselLisaComponent
   ]
 })
-export class HomeModule { }
+export class CarouselLisaModule { }

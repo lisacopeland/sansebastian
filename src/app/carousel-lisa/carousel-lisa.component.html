@@ -1,0 +1,11 @@
+<div class="carousel-wrapper" fxLayout="column" fxLayoutAlign="center center">
+  <img [src]="items[currentSlide].src" height="300">
+  <div class="button-row" fxLayout="row" fxLayoutGap="20px">
+    <button mat-icon-button class="carousel-button" (click)="prev()">
+      <mat-icon>navigate_before</mat-icon>Prev
+    </button>
+    <button mat-icon-button class="carousel-button" (click)="next()">Next
+      <mat-icon>navigate_next</mat-icon>
+    </button>
+  </div>
+</div>

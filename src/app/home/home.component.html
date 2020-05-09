@@ -7,13 +7,24 @@
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">San Sebastian</h1>
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Equestrian Center</h1>
   </div>
-  <div fxHide [fxShow.gt-md]=true class="red-border">
-    <owl-carousel-o [options]="customOptions">
-      <ng-container *ngFor="let slide of slides">
-        <ng-template carouselSlide [id]="slide.id">
-          <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
-        </ng-template>
-      </ng-container>
-    </owl-carousel-o>
+  <div class="red-border">
+  <ng-carousel
+    [config]="config"
+    (itemIndexChange)="setItemIndex($event)"
+    class="carousel-block">
+    <ng-template ngCarouselSlide let-item let-active="isActive">
+      <div [class.active]="active" [style.background-image]="item.src | safeHtml" class="carousel-slide">
+        <h2>
+          {{item.title}}
+        </h2>
+<!--         <button mat-raised-button ngCarouselPreventGhostClick color="primary">
+          Primary action
+        </button>
+        <button mat-button ngCarouselPreventGhostClick color="primary">
+          Secondary action
+        </button> -->
+      </div>
+    </ng-template>
+  </ng-carousel>
   </div>
 </div>

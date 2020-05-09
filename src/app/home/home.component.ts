@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Pipe, PipeTransform } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CarouselWidthMode, CarouselComponent, CarouselConfig, CarouselAlignMode } from 'ng-carousel-cdk';
 import { Observable } from 'rxjs';
+import { DomSanitizer } from '@angular/platform-browser';
 
 export interface SlideInterface {
   id: string;
@@ -17,36 +18,17 @@ export interface SlideInterface {
 })
 export class HomeComponent implements OnInit {
   links$: Observable<any> = this.scully.available$;
-  customOptions: OwlOptions = {
-    autoplay: true,
-    loop: true,
-    items: 1,
-    margin: 20,
-    center: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['<', '>'],
-/*     responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
-    }, */
-    nav: true
-  };
-
-  slides: SlideInterface[] = [
+  @ViewChild(CarouselComponent, { static: true }) carouselRef: CarouselComponent;
+  itemIndex = 0;
+  config: CarouselConfig = {
+    widthMode: CarouselWidthMode.PERCENT,
+    slideWidth: 100,
+    transitionDuration: 2500,
+    alignMode: CarouselAlignMode.CENTER,
+    shouldLoop: true,
+    autoplayEnabled: true,
+    dragEnabled: true,
+  items: [
     {
       id: '1',
       src: 'assets/slides/alex.jpg',
@@ -89,7 +71,8 @@ export class HomeComponent implements OnInit {
       alt: 'Wash rack',
       title: 'Wash rack'
     }
-  ];
+  ]
+};
 
   constructor(private scully: ScullyRoutesService) { }
 
@@ -97,6 +80,36 @@ export class HomeComponent implements OnInit {
     this.links$.subscribe(links => {
       console.log(links);
     });
+  }
+
+  prev(): void {
+    this.carouselRef.prev();
+  }
+
+  next(): void {
+    this.carouselRef.next();
+  }
+
+  goTo(index: number): void {
+    this.carouselRef.setIndex(index);
+  }
+
+  setItemIndex(newIndex: number): void {
+    this.itemIndex = newIndex;
+  }
+
+}
+
+@Pipe({
+  name: 'safeHtml'
+})
+export class SafeHtmlPipe implements PipeTransform {
+
+  constructor(private sanitizer: DomSanitizer) {
+  }
+
+  transform(html) {
+    return this.sanitizer.bypassSecurityTrustStyle('url(' + html + ')');
   }
 
 }

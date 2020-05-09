@@ -11,7 +11,20 @@
   margin: 32px 0px 32px 0px;
 }
 
-.red-border {
-  border: 1px solid red;
-  margin-top: 32px;
-}
+    .carousel-block {
+        flex: none;
+        width: 100%;
+    }
+
+    .carousel-slide {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        border: 5px solid rgb(105, 105, 105);
+
+        &.active {
+            border-color: lightcoral;
+        }
+    }
