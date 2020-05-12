@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ContactFormService, ContactInterface } from './conact-form.service';
+import { ContactFormService, ContactInterface } from './contact-form.service';
 import { Router } from '@angular/router';
 
 @Component({

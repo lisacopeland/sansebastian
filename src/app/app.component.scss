@@ -1,14 +1,34 @@
 .page-wrapper {
   min-height: 100vh;
   height: 100vh;
+}
+
+.page-wrapper-background-image {
+  background-color: #6b4939;
   background-image: url('../assets/images/outdoorarena2.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+.page-wrapper-md {
+  background-color: #99ffcc;
+}
+
+.page-wrapper-sm {
+  background-color: pink;
+}
+
+.page-wrapper-xs {
+  background-color: #ffff99
+}
+
+.page-wrapper-solid {
+  background-color: #6b4939;
+}
+
 .page-layout {
-  width: 100%;
-  height: 75vh;
+  width: 99%;
+  height: 74vh;
 }
 

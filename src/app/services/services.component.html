@@ -1,41 +1,46 @@
+<section class="page-layout" fxLayout="column" fxLayoutAlign="center">
 <mat-card class="services-card" fxLayout="column">
-  <div fxLayout="row">
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column">
     <div class="card-column">
-    <div class="heading-text">Services and Rates</div>
-    <p class="subheading-text">Board - $700.00 per month, $25 per day</p>
-    <p>Includes:</p>
-    <ul>
-        <li>Feeding hay and grain, 4 times per day</li>
-        <li>Stall cleaning, 7 days per week</li>
-        <li>Turnout 7 days per week, weather permitting</li>
-        <li>Use of the facility</li>
-    </ul>
-    <p>Does not include</p>
-    <ul>
-        <li>Grooming, available for a fee</li>
-        <li>Exercising or handling, available for a fee</li>
-        <li>Blanketing on a daily basis</li>
-    </ul>
-    <p class="subheading-text">Boarder trailer parking - $25.00 per month</p>
-    <p class="subheading-text">Non Boarder trailer parking - $25.00 per month, space permitting</p>
-    <p class="subheading-text">Apply and remove boots for turnout - $40.00 per month</p>
+      <div class="heading-text">Services and Rates</div>
+      <p class="subheading-text">Board - $700.00 per month, $25 per day</p>
+      <p>Includes:</p>
+      <ul>
+          <li>Feeding hay and grain, 4 times per day</li>
+          <li>Stall cleaning, 7 days per week</li>
+          <li>Turnout 7 days per week, weather permitting</li>
+          <li>Use of the facility</li>
+      </ul>
+      <p>Does not include</p>
+      <ul>
+          <li>Grooming, available for a fee</li>
+          <li>Exercising or handling, available for a fee</li>
+          <li>Blanketing on a daily basis</li>
+      </ul>
+      <p class="subheading-text">Boarder trailer parking - $25.00 per month</p>
+      <p class="subheading-text">Non Boarder trailer parking - $25.00 per month, space permitting</p>
+      <p class="subheading-text">Apply and remove boots for turnout - $40.00 per month</p>
     </div>
     <div class="card-column">
-    <div class="heading-text">Daily Schedule</div>
-      <p>7:00am Morning Feeding - Hay, Grain, Supplements</p>
-      <p>9:00am Turnout morning horses*</p>
-      <p>12:00pm Morning horses come in, lunch</p>
-      <p>12:00pm Afternoon horses go out, lunch</p>
-      <p>4:00pm Afternoon horses come in</p>
-      <p>4:00pm Dinner feeding - Hay and grain</p>
-      <p>9:00pm Night check - water, hay, lights out</p>
-      <i>*Turnout schedule is flexible dependant on weather</i>
-    </div>
+      <div class="heading-text">Daily Schedule</div>
+        <p>7:00am Morning Feeding - Hay, Grain, Supplements</p>
+        <p>9:00am Turnout morning horses*</p>
+        <p>12:00pm Morning horses come in, lunch</p>
+        <p>12:00pm Afternoon horses go out, lunch</p>
+        <p>4:00pm Afternoon horses come in</p>
+        <p>4:00pm Dinner feeding - Hay and grain</p>
+        <p>9:00pm Night check - water, hay, lights out</p>
+        <i>*Turnout schedule is flexible dependant on weather</i>
+      </div>
   </div>
   <div fxLayout="column">
     <div class="heading-text">
       Downloads
     </div>
-    <a href="../../assets/downloads/liabilityrelease.pdf" download>Liability Release</a>
+    <div fxLayout="row" fxLayoutGap="24px">
+      <a href="../../assets/downloads/liabilityrelease.pdf" download>Liability Release</a>
+      <a href="../../assets/downloads/boardingagreement.pdf" download>Boarding Agreement</a>
+    </div>
   </div>
 </mat-card>
+</section>

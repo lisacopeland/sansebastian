@@ -1,6 +1,13 @@
+.page-layout {
+  height: 100%;
+  width: 100%;
+}
+
 .services-card {
-  margin: 32px;
-  padding: 32px;
+  width: 65%;
+  height: 85%;
+  padding: 28px;
+  margin: auto;
 }
 
 .card-text {
