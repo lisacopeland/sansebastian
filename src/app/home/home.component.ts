@@ -70,6 +70,24 @@ export class HomeComponent implements OnInit {
       src: 'assets/slides/washrack.jpg',
       alt: 'Wash rack',
       title: 'Wash rack'
+    },
+    {
+      id: '8',
+      src: 'assets/slides/Cinnamon.jpg',
+      alt: 'Laura on Cinnamon',
+      title: 'Cinnamon'
+    },
+    {
+      id: '9',
+      src: 'assets/slides/Sebastian2.jpg',
+      alt: 'Sebastian',
+      title: 'Sebastian - Debra Butterfield'
+    },
+    {
+      id: '10',
+      src: 'assets/slides/Corino.jpg',
+      alt: 'Corino',
+      title: 'Corino'
     }
   ]
 };
