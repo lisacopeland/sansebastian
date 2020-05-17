@@ -5,6 +5,7 @@ import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { MaterialModule } from '../material/material.module';
     CommonModule,
     ReactiveFormsModule,
     MaterialModule,
+    FlexLayoutModule,
     ContactRoutingModule
   ]
 })

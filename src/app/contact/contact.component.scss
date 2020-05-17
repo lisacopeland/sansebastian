@@ -4,10 +4,17 @@
 }
 
 .contact-card {
-  width: 65%;
-  height: 80%;
   padding: 32px;
   margin: auto;
+}
+
+.contact-card-full {
+  width: 65%;
+  height: 80%;
+}
+
+.contact-card-small {
+  width: 100%;
 }
 
 .contact-title {

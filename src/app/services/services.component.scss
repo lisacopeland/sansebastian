@@ -4,11 +4,19 @@
 }
 
 .services-card {
-  width: 65%;
-  height: 85%;
   padding: 28px;
   margin: auto;
 }
+
+.services-card-full {
+  width: 65%;
+  height: 80%;
+}
+
+.services-card-small {
+  width: 100%;
+}
+
 
 .card-text {
   margin-bottom: 32px;
@@ -22,4 +30,8 @@
   font-weight: 500;
   font-size: larger;
   margin: 0px 0px 24px 0px;
+}
+
+.download-section {
+  margin: 16px 0px 16px 0px;
 }

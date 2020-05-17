@@ -4,12 +4,24 @@
 }
 
 .location-card {
-  width: 65%;
-  height: 80%;
   padding: 32px;
   margin: auto;
 }
 
+.location-card-full {
+  width: 65%;
+  height: 80%;
+}
+
+.location-card-small {
+  width: 100%;
+}
+
+.map-class {
+  width: 80%;
+}
+
 .card-text {
   margin-bottom: 32px;
+  text-align: wrap;
 }

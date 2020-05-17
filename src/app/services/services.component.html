@@ -1,5 +1,5 @@
 <section class="page-layout" fxLayout="column" fxLayoutAlign="center">
-<mat-card class="services-card" fxLayout="column">
+<mat-card class="services-card" ngClass.gt-xs="services-card-full" ngClass.xs="services-card-small" fxLayout="column">
   <div fxLayout.gt-sm="row" fxLayout.lt-md="column">
     <div class="card-column">
       <div class="heading-text">Services and Rates</div>
@@ -30,17 +30,17 @@
         <p>4:00pm Afternoon horses come in</p>
         <p>4:00pm Dinner feeding - Hay and grain</p>
         <p>9:00pm Night check - water, hay, lights out</p>
-        <i>*Turnout schedule is flexible dependant on weather</i>
+        <div class="download-section">
+          <div class="heading-text">
+            Downloads
+          </div>
+          <div fxLayout="column">
+            <a href="../../assets/downloads/liabilityrelease.pdf" download>Liability Release</a>
+            <a href="../../assets/downloads/boardingagreement.pdf" download>Boarding Agreement</a>
+          </div>
+        </div>
+        <i>*Turnout schedule is flexible and dependant on weather</i>
       </div>
-  </div>
-  <div fxLayout="column">
-    <div class="heading-text">
-      Downloads
-    </div>
-    <div fxLayout="row" fxLayoutGap="24px">
-      <a href="../../assets/downloads/liabilityrelease.pdf" download>Liability Release</a>
-      <a href="../../assets/downloads/boardingagreement.pdf" download>Boarding Agreement</a>
-    </div>
   </div>
 </mat-card>
 </section>
