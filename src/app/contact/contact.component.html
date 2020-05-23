@@ -1,11 +1,11 @@
-<section class="page-layout" fxLayout="column" fxLayoutAlign="center">
-  <mat-card class="contact-card" ngClass.gt-xs="contact-card-full" ngClass.xs="contact-card-small">
+<section fxLayout="column" fxLayoutAlign="center">
+  <mat-card fxLayout="column" class="contact-card" ngClass.gt-xs="contact-card-full" ngClass.xs="contact-card-small">
     <h1 class="contact-title">Contact Me</h1>
     <div class="contact-text">
     <div>Want more information about boarding or training? Use the contact form below to send me
       a message, send me email at <span><a href="mailto:lisacope@msn.com">lisacope@msn.com</a></span>, or call me at <span><a href="tel:12066193815">(206) 619-3815</a></span></div>
     </div>
-    <form class="form-card" fxLayout="column" fxLayoutAlign="start" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <form fxLayout="column" fxLayoutAlign="start" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <mat-form-field class="input-75">
         <mat-label>Email</mat-label>
         <input matInput type="email" placeholder="Email" formControlName="email" required>

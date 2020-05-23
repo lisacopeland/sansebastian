@@ -2,12 +2,16 @@
   <ul class="link-text">
     <li *ngFor="let page of links$ | async">{{ page.route }}</li>
   </ul>
-  <div class="hero-banner" fxLayout="center" fxLayout="column">
+  <div fxHide [fxShow.gt-sm]=true class="hero-banner" fxLayout="center" fxLayout="column">
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Welcome to</h1>
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">San Sebastian</h1>
     <h1 class="hero-text" fxLayout="row" fxLayoutAlign="center">Equestrian Center</h1>
   </div>
-  <div fxHide [fxShow.gt-sm]=true fxLayout="column" class="carousel-border">
+  <div fxHide [fxShow.lt-md]=true class="small-hero-banner" fxLayout="center" fxLayout="column">
+    <h1 fxLayout="row" fxLayoutAlign="center">Welcome to San Sebastian Equestrian Center</h1>
+  </div>
+<!--     <div fxHide [fxShow.gt-sm]=true fxLayout="column" class="carousel-border"> -->
+  <div fxLayout="column" class="carousel-border">
     <ng-carousel
       [config]="config"
       (itemIndexChange)="setItemIndex($event)"
