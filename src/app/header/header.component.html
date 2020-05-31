@@ -1,19 +1,21 @@
 <div class="menu-ribbon" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="24px">
   <div class="logo" fxLayout="column">
-    <img src="../../assets/images/logo.png" height="75">
+    <img src="../../assets/images/logo.png" alt="logo" height="75">
   </div>
     <div fxHide [fxShow.gt-xs]=true>
       <button class="menu-button hvr-grow" mat-flat-button routerLink="/home">Home</button>
+      <button class="menu-button hvr-grow" mat-flat-button routerLink="/about">About</button>
       <button class="menu-button hvr-grow" mat-flat-button routerLink="/location">Location</button>
       <button class="menu-button hvr-grow" mat-flat-button routerLink="/services">Services</button>
       <button class="menu-button hvr-grow" mat-flat-button routerLink="/contact">Contact</button>
     </div>
     <div fxHide [fxShow.lt-sm]=true>
-      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <button aria-label="Open menu" mat-icon-button [matMenuTriggerFor]="appMenu">
         <mat-icon>menu</mat-icon>
       </button>
       <mat-menu #appMenu="matMenu">
         <button mat-menu-item routerLink="/home">Home</button>
+        <button mat-menu-item routerLink="/about">About</button>
         <button mat-menu-item routerLink="/location">Location</button>
         <button mat-menu-item routerLink="/services">Services</button>
         <button mat-menu-item routerLink="/contact">Contact</button>
