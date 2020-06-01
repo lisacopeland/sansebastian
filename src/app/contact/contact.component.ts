@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ContactFormService, ContactInterface } from './contact-form.service';
 import { Router } from '@angular/router';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-contact',
@@ -41,8 +42,27 @@ export class ContactComponent implements OnInit {
       email: this.contactForm.value.email,
       phone: this.contactForm.value.phone,
       subject: this.contactForm.value.subject,
-      message: this.contactForm.value.message
+      message: this.contactForm.value.message,
+      sentAt: firebase.firestore.Timestamp.now()
     };
+    const emailInfo = {
+      to: 'lisacope@msn.com',
+      template: {
+        name: 'WelcomeMail',
+        data: {
+          username: this.contactForm.value.email,
+          subject: this.contactForm.value.subject,
+          message: this.contactForm.value.message
+        }
+      }
+    };
+
+    this.contactFormService.createEmail(emailInfo)
+      .subscribe(() => {
+        console.log('email sent');
+      }, error => {
+        console.log(error);
+      });
 
     this.contactFormService.createPost(contactInfo)
       .subscribe(data => {

@@ -7,6 +7,7 @@ export interface ContactInterface {
   phone: string;
   subject: string;
   message: string;
+  sentAt: firebase.firestore.Timestamp;
 }
 
 @Injectable({
@@ -17,5 +18,9 @@ export class ContactFormService {
 
   createPost(contact: ContactInterface) {
     return from(this.firestore.collection('contacts').add(contact));
+  }
+
+  createEmail(mail: any) {
+    return from(this.firestore.collection('mail').add(mail));
   }
 }
